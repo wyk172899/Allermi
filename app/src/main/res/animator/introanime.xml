@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+
+<objectAnimator
+    android:duration="1000"
+    android:startOffset="1000"
+    android:repeatCount="5"
+    android:repeatMode="restart">
+    <propertyValuesHolder
+        android:propertyName=""
+        android:valueFrom="0.5"
+        android:valueTo="1.0"
+        android:valueType="floatType" />
+    <propertyValuesHolder
+        android:propertyName="rotationX"
+        android:valueFrom="0.5"
+        android:valueTo="1.0"
+        android:valueType="floatType" />
+</objectAnimator>
+</set>
