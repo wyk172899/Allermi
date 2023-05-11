@@ -1,7 +1,14 @@
-package com.example.allermi.model
+package com.example.allermi.util
+
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 class AllergyConverter {
-    fun allergyConvert() {
+
+    fun allergyConvert(allergyData: List<String>) = CoroutineScope(Dispatchers.Default).launch {
+        var alteredList: List<String>
         val eras = arrayOf(" ", "함유", "함류", "포함", "유래원재료", "이제품은우유", "대두를사용한제품과같은제조시설에서제조하고있습니다.", "해당사항없음",
             "(메추리알)", "*", "이상없음", "무", "알수없음", "없음.")
         val reps = mapOf(Pair("우유(버터)", "우유"), Pair("본제품은원재료중대두", "대두"), Pair("우유가되어있으니알레르기질환이있으신분은주의하세요","우유"),
@@ -46,5 +53,8 @@ class AllergyConverter {
             Pair("·이제품은원재료에알레르기유발물질인대두","대두"), Pair("쇠고기를하고있습니다.","소고기"), Pair("▶이제품은원재료에알레르기유발물질인밀","밀"),
             Pair("땅콩을하고있습니다.","땅콩"), Pair("돼지고기에민감한반응이있으신분은드시기전에원재료명을확인하세요","돼지고기"), Pair("유청(우유)","우유")
         )
+        for (items in allergyData){
+
+        }
     }
 }
